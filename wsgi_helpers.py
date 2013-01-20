@@ -33,7 +33,7 @@ class handle_file(object):
         self._use_cache = use_cache
         self._cache = None
         self._last_modified = os.stat(self._path).st_mtime
-        self._mimetype = mimetypes.guess_type(self._path)[1]
+        self._mimetype = mimetypes.guess_type(self._path)[0]
 
     def __call__(self, environ, start_response):
         modified = os.stat(self._path).st_mtime
