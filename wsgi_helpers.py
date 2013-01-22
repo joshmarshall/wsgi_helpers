@@ -29,7 +29,6 @@ class handle_file(object):
 
     def __init__(self, path, use_cache=True):
         self._path = os.path.abspath(path)
-        print self._path
         self._use_cache = use_cache
         self._cache = None
         self._last_modified = os.stat(self._path).st_mtime
